@@ -9,11 +9,11 @@ function esPositivo(num) {
    // Si el número es 0, devuelve false.
    // Tu código:
    if (num > 0){
-      return "Es positivo";
+      return("Es positivo");
    } else if (num < 0){
-      return "Es negativo";
-   } else{
-      return false;
+      return("Es negativo");
+   } else {
+      return(false);
    }
 }
 
@@ -28,14 +28,14 @@ function combinarNombres(nombre, apellido) {
    // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
    // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
    // Tu código:
-   return (nombre + " " + apellido);
+   return(nombre + " " + apellido);
 }
 
 function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
    // Tu código:
-   return "Hola " + nombre + "!";
+    return("Hola " + nombre + "!");
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -61,7 +61,7 @@ function deEuroAdolar(euro) {
    // Supongamos que 1 euro equivale a 1.20 dólares.
    // Debes calcular el valor recibido como argumento pasándolo a dolares.
    // Tu código:
-   return(euro * 1.20);
+   return(euro * 1.2);
 }
 
 function esVocal(letra) {
@@ -69,17 +69,11 @@ function esVocal(letra) {
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
-   const vocales = Array.of('a', 'e', 'i', 'o', 'u');
-   let respuesta = null
-   
-   if (vocales.includes(letra)){
-      respuesta = "Es vocal";
-   } else if (letra.lenght > 1){
-      respuesta = "Dato incorrecto";
-   } else if (!vocales.includes(letra)){
-      respuesta = "Dato incorrecto";
+   if (letra == "a"||letra == "e"||letra == "i"||letra == "o"||letra == "u"){
+      return("Es vocal");
+   } else {
+      return("Dato incorrecto");
    }
-   return(respuesta);
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

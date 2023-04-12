@@ -10,7 +10,7 @@ function mayuscula(nombre) {
 
 function invocarCallback(cb) {
    // Invoca/ejecuta el callback `cb`.
-   // [NOTA]: no debes reotornar nada.
+   // [NOTA]: no debes reotrnar nada.
    // Tu código:
    cb();
 }
@@ -20,8 +20,7 @@ function operacionMatematica(num1, num2, cb) {
    // El callback realiza una operación matemática, por lo que necesita de los dos números.
    // Retorna el resultado del callback pasándole como parámetros los números.
    // Tu código:
-   var resultado = cb(num1, num2);
-   return(resultado);
+   cb(num1, num2);
 }
 
 function sumarArray(arrayOfNumbers, cb) {
@@ -31,7 +30,7 @@ function sumarArray(arrayOfNumbers, cb) {
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
    var suma = 0;
-   for (let i = 0; i < arrayOfNumbers.length; i+=1){
+   for (let i = 0; i < arrayOfNumbers.length; i++){
       suma += arrayOfNumbers[i];
    }
    cb(suma);
@@ -42,7 +41,7 @@ function forEach(array, cb) {
    // Debes iterar sobre el arreglo, y por cada elemento ejecutar el callback.
    // Debes pasarle el elemento como argumento al callback.
    // Tu código:
-   for (let i = 0; i < array.length; i+=1){
+   for (let i = 0; i < array.length; i++){
       cb(array[i]);
    }
 }
@@ -52,19 +51,20 @@ function map(array, cb) {
    // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
    // Retorna el nuevo arreglo.
    // Tu código:
-   var array1 = [];
-   for (let i = 0; i < array.length; i+=1){
-      array1.push(cb(array[i]));
+   var arg = [];
+   for (let i = 0; i < array.length; i++){
+      arg.push(cb(array[i]));
    }
-   return(array1);
+   return(arg);
 }
+
 function filter(arrayOfStrings) {
    // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
    var array = [];
-   for (let i = 0; i < arrayOfStrings.length; i+=1){
-      if (arrayOfStrings[i].charAt(0) == ("a")){
+   for (let i = 0; i < arrayOfStrings.length; i++){
+      if (arrayOfStrings[i].startsWith("a")){
          array.push(arrayOfStrings[i]);
       }
    }
