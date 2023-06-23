@@ -5,7 +5,7 @@ function mayuscula(nombre) {
    // Debe devolver el mismo nombre, pero con la primera letra en mayúscula.
    // [Ejemplo]: "mario" ----> "Mario".
    // Tu código:
-   return(nombre.charAt(0).toUpperCase() + nombre.slice(1));
+   return (nombre.charAt(0).toUpperCase() + nombre.slice(1));
 }
 
 function invocarCallback(cb) {
@@ -29,11 +29,13 @@ function sumarArray(arrayOfNumbers, cb) {
    // Este resultado debes pasárselo como argumento al callback recibido.
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
-   var suma = 0;
+   let total = 0;
+
    for (let i = 0; i < arrayOfNumbers.length; i++){
-      suma += arrayOfNumbers[i];
+      total += arrayOfNumbers[i];
    }
-   cb(suma);
+
+   cb(total);
 }
 
 function forEach(array, cb) {
@@ -51,24 +53,28 @@ function map(array, cb) {
    // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
    // Retorna el nuevo arreglo.
    // Tu código:
-   var arg = [];
+   let arr = [];
+
    for (let i = 0; i < array.length; i++){
-      arg.push(cb(array[i]));
+      arr.push(cb(array[i]));
    }
-   return(arg);
+
+   return arr;
 }
 
 function filter(arrayOfStrings) {
    // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
-   var array = [];
+   let arr = [];
+
    for (let i = 0; i < arrayOfStrings.length; i++){
-      if (arrayOfStrings[i].startsWith("a")){
-         array.push(arrayOfStrings[i]);
+      if (arrayOfStrings[i].charAt(0) == "a"){
+         arr.push(arrayOfStrings[i]);
       }
    }
-   return(array);
+
+   return arr;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
